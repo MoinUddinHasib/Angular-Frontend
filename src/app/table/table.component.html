@@ -1,0 +1,23 @@
+<link href="table.component.css" rel="stylesheet" type="text/css">
+<div id="tabella">
+<table> 
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Code</th>
+            <th>Status</th>
+            <th>Departure</th>
+            <th>Arrival</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let volo of voli">
+            <td>{{volo.id}}</td>
+            <td>{{volo.code}}</td>
+            <td>{{volo.status}}<br><button *ngIf="volo.status == 'SCHEDULED'" (click)="cancella.emit(volo.id)"> Cancel </button></td>
+            <td>{{volo.departure.date}}<br>{{volo.departure.airport}}</td>
+            <td>{{volo.arrival.date}}<br>{{volo.arrival.airport}}</td>
+        <tr>
+    </tbody>
+</table>
+</div>

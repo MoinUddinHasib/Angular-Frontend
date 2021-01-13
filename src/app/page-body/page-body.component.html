@@ -1,0 +1,23 @@
+<html>
+<head>
+</head>
+<body>
+    <h1>Flights</h1>
+    <div class="container" >
+        <div class="row">
+            <div class="col">
+            <app-table [voli]="dati1" (cancella)="cancellaVolo($event)"></app-table>
+            </div><div class="col">
+            <app-table [voli]="dati2" (cancella)="cancellaVolo($event)"></app-table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+            <app-table [voli]="dati3" (cancella)="cancellaVolo($event)"></app-table>
+            </div><div class="col">
+            <app-table [voli]="dati4" (cancella)="cancellaVolo($event)"></app-table>
+            </div>
+        </div>
+      </div>
+</body>
+</html>
